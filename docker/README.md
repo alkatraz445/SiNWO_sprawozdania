@@ -1,6 +1,7 @@
-# Docker
+# Ćwiczenie 5
 
-Repozytorium ze wszystkim co związane z zadaniem 5.
+Repozytorium ze wszystkim co związane z zadaniem 5: [link](https://github.com/alkatraz445/SIPO_5)
+
 
 ## `Dockerfile`
 
@@ -49,8 +50,6 @@ CMD ["gunicorn", "--bind", "0.0.0.0:7777", "app:app"]
 ```
 
 ## Aplikacja Flask
-
-Repozytorium z aplikacją: [link](https://github.com/alkatraz445/SIPO_5)
 
 Wersja pythona: `3.10`
 
