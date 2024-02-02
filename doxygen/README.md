@@ -1,5 +1,5 @@
 # Ćwiczenie 4
-Repozytorium z plikami nie ma
+Repozytorium z plikami wykorzystanymi w ćwiczeniu: [link](https://github.com/alkatraz445/SiNWO_4)
 
 ## `main.py`
 ```py
