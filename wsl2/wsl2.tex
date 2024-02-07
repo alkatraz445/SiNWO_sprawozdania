@@ -1,0 +1,85 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\usepackage{adjustbox}
+\usepackage[polish]{babel}
+\usepackage{polski}
+\usepackage{boldline}
+\usepackage[T1]{fontenc} 
+\usepackage{listings}
+\usepackage{color}
+\usepackage{biblatex}
+\usepackage{csquotes}
+% \usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+\newcommand*{\TakeFourierOrnament}[1]{{%
+\fontencoding{U}\fontfamily{futs}\selectfont\char#1}}
+\newcommand*{\danger}{\TakeFourierOrnament{`1}}
+
+\hypersetup{colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    pdftitle={WSL2 - Windows Subsystem for Linux 2},
+}
+
+\title{WSL2 \\ \large{Windows Subsystem for Linux 2}}
+\date{}
+\author{Jakub Kraus}
+\begin{document}
+\maketitle
+\section{Cel i zakres ćwiczenia}
+Celem ćwiczenia jest zapoznanie się z narzędziem WSL2, które pozwala na uruchamianie systemu Linux wewnątrz systemu Windows.
+\section{Co to jest WSL2?}
+WSL w wersji 2 jest w skrócie narzędziem działającym jako frontend dla hyperV, który zajmuje się menadżowaniem maszyn wirtualnych na systemach Microsoft Windows. W przeciwieństwie do WSL1, które było tylko warstwą kompatybilności (tłumaczyło polecenia linuxowe na polecenia windowsowe), WSL2 jest w pełni zwirtualizowaną maszyną
+co pozwala na własny pełnoprawny kernel linuxowy (aktualnie w wersji 5.15LTS).
+\section{Charakterystyka narzędzia WSL2}
+\subsection{Zalety}
+\begin{itemize}
+    \item W pełni zwirtualizowana maszyna
+\end{itemize}
+\subsection{Wady}
+\section{Proces wdrażania WSL2 na sytemie Microsoft Windows}
+\subsection{Wymagania systemowe}
+Aby móc korzystać z WSL2 należy spełnić kilka warunków:
+\begin{itemize}
+    \item System Windows 10 w wersji $\geq$ 2004 lub Windows 11
+    \item Włączona wirtualizacja w UEFI
+    \item Włączona opcja WSL2
+    \item Włączona opcja Hyper-V
+\end{itemize}
+\subsubsection{Włączenie wirtualizacji w UEFI}
+Włączenie wirtualizacji w UEFI jest zależne od producenta płyty głównej. W większości przypadków jest to opcja włączana w UEFI w zakładce \textbf{Security}.
+
+\begin{tcolorbox}
+    \begin{minipage}{1\textwidth}
+        \large{\danger}
+        Z uwagi na różnorodność producentów płyt głównych nie jestem w stanie podać jednoznacznej instrukcji jak włączyć wirtualizację w UEFI. Najlepiej jest skorzystać z instrukcji producenta swojej płyty głównej. Przykładowo strona lenovo: \url{https://support.lenovo.com/pl/pl/solutions/ht500006}
+    \end{minipage}
+\end{tcolorbox}
+
+Aby dotrzeć do UEFI należy uruchomić komputer ponownie i wcisnąć klawisz odpowiedzialny za wejście do UEFI (zazwyczaj jest to klawisz F2, F10, F12 lub DEL).
+
+\subsection{Instalacja narzędzia WSL2}
+Jeśli wymagania są spełnione jedyne co jest wymagane do instalacji WSL2 to uruchomienie PowerShell jako administrator i wykonanie poniższej komendy:
+\begin{lstlisting}
+wsl - -install
+\end{lstlisting}
+To polecenie powinno włączyć wszystkie wymagane opcje i zainstalować Ubuntu w wersji LTS (na ten moment 22.04) na naszym komputerze.
+\section{Instalacja systemu Ubuntu}
+\section{Uruchomienie systemu Ubuntu}
+\section{Wykonanie poleceń w terminalu systemu Ubuntu}
+\section{Program ćwiczenia}
+\tableofcontents
+\end{document}
